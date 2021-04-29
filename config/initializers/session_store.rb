@@ -1,0 +1,2 @@
+#Is where we define where the cookies need to be structure like
+Rails.application.config.session_store :cookie_store, key: "_authentication_app", domain: "my-domain-app-api.herokuapp.com" #We are saying that for sessions we are going to use cookies

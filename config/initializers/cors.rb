@@ -8,4 +8,11 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
         resource "*", headeres: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]#To allow all resources, headers that need to be sent and what methods we allow.
 credentials: true #What is going to allow you to pass those headers back n forth
     end
+
+    allow do
+        origin "https://my-domain-herokuapp.com" 
+        resource "*", headeres: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+credentials: true 
+    end
+    
 end
